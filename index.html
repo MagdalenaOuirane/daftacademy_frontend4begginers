@@ -59,38 +59,39 @@
                     <img class="band-members__image" src="./images/band-member01.png"
                         alt="Image of stylized keyboard player's face" />
                     <p class="band-members__name">Kamil Zgondek</p>
-                    <p class="band-members__desc">Keyboard</p>
+                    <p class="band-members__desc">Keys</p>
                 </li>
                 <li class="band-members__item">
                     <img class="band-members__image" src="./images/band-member02.png"
                         alt="Image of stylized vocalist's face" />
-                    <p class="band-members__name">Łukasz Furman</p>
-                    <p class="band-members__desc">Vocals</p>
+                    <p class="band-members__surname">Łukasz Furman</p>
+                    <p class="band-members__music">Vocals</p>
                 </li>
                 <li class="band-members__item">
                     <img class="band-members__image" src="./images/band-member03.png"
                         alt="Image of stylized drummer's face" />
-                    <p class="band-members__name">Kamil Majewski</p>
-                    <p class="band-members__desc">Drums</p>
+                    <p class="band-members__surname">Kamil Majewski</p>
+                    <p class="band-members__music">Drums</p>
                 </li>
                 <li class="band-members__item">
                     <img class="band-members__image" src="./images/band-member04.png"
                         alt="Image of stylized bassist's face" />
-                    <p class="band-members__name">Daniel Cajzer</p>
-                    <p class="band-members__desc">Bass guitar</p>
+                    <p class="band-members__surname">Daniel Cajzer</p>
+                    <p class="band-members__music">Bass guitar</p>
                 </li>
             </ul>
 
         </section>
         <section id="about" class="content-section about-section">
             <h2 class="content-section__header">About</h2>
-            <img src="./images/band01.jpg" alt="Image of band members standing at the construction site" />
+            <img class="img-band" src="./images/band01.jpg"
+                alt="Image of band members standing at the construction site" />
             <div class="about-section__desc">
                 <h3 class="about-section__desc-header">Straight from Lublin</h3>
                 <p class="about-section__desc-details">
                     6BM is a young band which has it's origins in the city of Lublin, playing music described as
-                    electrorock.<br />
-                    Band members aim to convey emotions, reflexion but also hope.<br /><br />
+                    electrorock.
+                    Band members aim to convey emotions, reflexion but also hope.<br><br>
                     They are inspired by various genres, like: alternative rock, nu-metal, synthwave or even
                     drum'n'bass.<br />
                     As for now they released their debut EP - TRINITY and they started working on their first full
@@ -141,8 +142,8 @@
         </section>
         <section id="video" class="content-section">
             <h2 class="content-section__header">Video</h2>
-            <iframe width="853" height="480" src="https://www.youtube.com/embed/AstRXh-vKNI?rel=0" frameborder="0"
-                allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe class="iframe" width="853" height="480" src="https://www.youtube.com/embed/AstRXh-vKNI?rel=0"
+                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </section>
         <section id="photos" class="content-section">
             <h2 class="content-section__header">Photos</h2>
@@ -189,12 +190,13 @@
             <h2 class="content-section__header">Contact</h2>
             <img class="gallery__image" src="./images/band12.jpg" alt="Image of band members posing next to a train" />
             <address>
-                Tel: 123 456 789<br />
-                E-mail: 6bmmusic@gmail.com
+                E-mail: 6bmmusic@gmail.com<br />
+                Tel: 123 456 789
+
             </address>
             <form class="form">
                 <div class="form__field">
-                    <label class="form__label" for="email">E-mail</label>
+                    <label class="form__label" for="email">Email</label>
                     <input class="form__input" type="email" name="email" id="email" required />
                 </div>
                 <div class="form__field">
@@ -215,16 +217,33 @@
         <h2 class="screen-reader-only">Social media links</h2>
         <ul class="social-links">
             <li class="social-links__item">
-                <a class="social-links__link" href="http://facebook.com/">Facebook</a>
+                <a class="social-links__link" href="http://facebook.com/"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="25" height="25" viewBox="0 0 40 40">
+                        <path fill="#EC008C" fill-opacity=".8" fill-rule="evenodd"
+                            d="M38.711 36.685a2.027 2.027 0 0 1-2.026 2.027H27.33V24.495h4.772l.715-5.541H27.33v-3.537c0-1.604.446-2.697 2.746-2.697l2.934-.001V7.763c-.508-.067-2.249-.218-4.275-.218-4.23 0-7.126 2.582-7.126 7.324v4.085h-4.784v5.541h4.784v14.217H4.026A2.027 2.027 0 0 1 2 36.685V4.027C2 2.907 2.907 2 4.026 2h32.659c1.119 0 2.026.907 2.026 2.027v32.658" />
+                    </svg></a>
+            </li>
+
+            <li class="social-links__item">
+                <a class="social-links__link" href="http://instagram.com/"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="25" height="25" viewBox="0 0 40 40">
+                        <path fill="#EC008C" fill-opacity=".8" fill-rule="evenodd"
+                            d="M34.305 2H6.358A4.352 4.352 0 0 0 2 6.348v27.967a4.353 4.353 0 0 0 4.358 4.348h27.947a4.353 4.353 0 0 0 4.358-4.348V6.348A4.352 4.352 0 0 0 34.305 2zm-5.953 5.728c0-.632.513-1.145 1.145-1.145h3.437c.633 0 1.146.513 1.146 1.145v3.437c0 .633-.513 1.146-1.146 1.146h-3.437a1.146 1.146 0 0 1-1.145-1.146V7.728zm-7.978 5.612c3.894 0 7.051 3.15 7.051 7.034 0 3.885-3.157 7.034-7.051 7.034-3.893 0-7.05-3.149-7.05-7.034 0-3.884 3.157-7.034 7.05-7.034zm14.852 20.74c0 .632-.513 1.146-1.146 1.146H6.583a1.147 1.147 0 0 1-1.146-1.146V16.894h4.583c-.597.859-.799 2.462-.799 3.48 0 6.135 5.004 11.127 11.153 11.127 6.15 0 11.154-4.992 11.154-11.127 0-1.018-.145-2.597-.885-3.48h4.583V34.08z" />
+                    </svg></a>
             </li>
             <li class="social-links__item">
-                <a class="social-links__link" href="http://instagram.com/">Instagram</a>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 40 40">
+                    <path fill="#EC008C" fill-opacity=".8" fill-rule="evenodd"
+                        d="M17.64 29.289l-1.466-4.086s-2.383 2.724-5.957 2.724c-3.16 0-5.406-2.818-5.406-7.327 0-5.777 2.84-7.842 5.635-7.842 4.033 0 5.315 2.676 6.415 6.105l1.466 4.696c1.467 4.556 4.215 8.219 12.142 8.219 5.682 0 9.531-1.785 9.531-6.48 0-3.805-2.109-5.778-6.049-6.717l-2.932-.657c-2.016-.47-2.611-1.316-2.611-2.724 0-1.598 1.236-2.537 3.252-2.537 2.2 0 3.391.846 3.574 2.865l4.582-.564C39.45 10.737 36.61 9 31.935 9c-4.124 0-8.155 1.596-8.155 6.716 0 3.193 1.511 5.214 5.314 6.153l3.116.75c2.337.564 3.115 1.551 3.115 2.913 0 1.737-1.649 2.442-4.765 2.442-4.627 0-6.551-2.49-7.651-5.918l-1.513-4.696C19.472 11.255 16.402 9 10.31 9 3.574 9 0 13.368 0 20.789c0 7.138 3.574 10.989 9.989 10.989 5.176 0 7.651-2.49 7.651-2.49" />
+                </svg>
+
             </li>
             <li class="social-links__item">
-                <a class="social-links__link" href="http://last.fm/">Last.fm</a>
-            </li>
-            <li class="social-links__item">
-                <a class="social-links__link" href="http://youtube.com/">Youtube</a>
+                <a class="social-links__link" href="http://youtube.com/"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="25" height="25" viewBox="0 0 40 40">
+                        <path fill="#EC008C" fill-opacity=".8" fill-rule="evenodd"
+                            d="M16.001 25L16 14l11 5.519L16.001 25zM39.6 12.04s-.391-2.743-1.59-3.951c-1.521-1.586-3.226-1.594-4.008-1.686C28.405 6 20.01 6 20.01 6h-.018s-8.396 0-13.994.403c-.782.092-2.486.1-4.008 1.686C.79 9.297.4 12.039.4 12.039S0 15.263 0 18.484v3.02c0 3.223.4 6.443.4 6.443s.39 2.744 1.589 3.952C3.51 33.484 5.51 33.434 6.4 33.599 9.6 33.905 20 34 20 34s8.405-.012 14.002-.416c.782-.093 2.487-.1 4.008-1.686 1.199-1.208 1.59-3.952 1.59-3.952s.4-3.22.4-6.443v-3.02c0-3.221-.4-6.443-.4-6.443z" />
+                    </svg></a>
             </li>
         </ul>
     </footer>
