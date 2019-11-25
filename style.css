@@ -12,8 +12,13 @@ Więcej na ten temat: https://cssreset.com/what-is-a-css-reset/
 }
 
 body {
-    margin: 0;
-    padding: 0;
+   margin: 0;
+   padding:0;
+   background-color:#25072E;
+   width:1400px;
+   background-color:CCC8FF;
+ color:#25072E;
+ 
 }
 
 h1, h2, h3 {
@@ -26,12 +31,7 @@ ul {
     padding: 0;
 }
 
-/*
-ZAGADNIENIE PONADPROGRAMOWE
-Rekomendowany zestaw właściwości, które pozwalają na ukrycie tekstu w taki sposób,
-że będzie niewidoczny do standardowego użytkownika, a czytniki ekranowe wciąż będą go czytać.
-Więcej na ten temat: https://webaim.org/techniques/css/invisiblecontent/
-*/
+
 .screen-reader-only {
     position: absolute;
     left: -10000px;
@@ -41,27 +41,246 @@ Więcej na ten temat: https://webaim.org/techniques/css/invisiblecontent/
     overflow: hidden;
 }
 
-/*
-Sekcja pomocnicza, aby zwizualizować pozycje głównych bloków strony. Będzie usunięta w następnych krokach.
-*/
+
 .page-header {
-    background-color: #ffb1b1;
+   background-color:#25072E;
+
 }
 
-.page-content {
-    background-color: #b0ffb0;
+
+.page-navigation {
+    background-color:#25072E;
+}
+ .page-navigation__item   {
+    text-transform:uppercase;
+    line-height:1.9;
+ 
 }
 
-.page-footer {
-    background-color: #7ba3ff;
-}
+ li a {
+   letter-spacing:4px;
+   text-decoration-line: none;
+   font-size:15px;
+   font-family: Open-Sans, sans-serif;
+   font-weight:bold;
+   color: #ef008e;
+ }
+
 
 .content-section {
-    background-color: #ca9aca;
+    background-color:#25072E;
+    display:flex;
+    flex-direction:column;
+   justify-content:flex-end;
+    
+    
 }
+
+.band-members {
+    display:flex;
+    flex-direction:row;
+   
+}
+
+.band-members__image {
+    width:100%;
+}
+
+.band-members__name {
+    color:white;
+    text-transform:uppercase;
+    font-weight:bold;
+    font-family: Open-Sans, sans-serif;
+    letter-spacing:2px;
+}
+
+.band-members__desc {
+   
+   position:relative;
+   right:125px;
+   font-size:13px;
+   line-height:1px;
+    font-family: Open-sans,sans-serif;
+    letter-spacing:1px;
+}
+
+.band-members__surname, .band-members__music {
+    display:none;
+}
+
+
+
+
+h2.content-section__header {
+    color:#ef008e;
+    text-transform:uppercase;
+    font-weight:bold;
+    font-family: Open-Sans, sans-serif;
+    letter-spacing:5px;
+    font-size:30px;
+    margin-top:20px;
+    margin-bottom:20px;
+
+}
+
+.img-band {
+    width:100%;
+    border-top: 5px solid #ef008e;
+}
+.about-section__desc-header {
+    text-transform:uppercase;
+    letter-spacing:3px;
+}
+
+div.about-section__desc {
+    position:absolute;
+    left:60px;
+    margin-bottom:80px;
+    background-color:#25072E;
+    display:flex;
+    flex-direction:column;
+    border-bottom: 5px solid #ef008e;
+    width:380px;
+    color:white;
+    text-align:left;
+    height:400px;
+    padding: 60px 20px 60px 20px;
+    margin: 5px;
+    font-family: Open-sans, sans-serif;
+
+}
+ p.about-section__desc-header {
+    word-spacing:2px;
+    font-size:15px;
+    font-weight:thin;
+ }
+
+ div.concerts {
+     display:flex;
+     flex-direction:row;
+     
+    
+ } 
+ article.concerts__item{
+ display:flex;
+ flex-wrap:wrap;
+ justify-content:space-around;
+ } 
+  
+  
+article.concerts__item>img.concerts__image {
+    flex-basis:50%;
+} 
+  
+  img.concerts__image {
+     width:100%;
+     border-bottom: 5px solid #ef008e; 
+ } 
+
+ p.concerts__date {
+     color:white;
+     position:relative;
+     right:95px;
+     letter-spacing: 2px;
+ }
+
+ p.concerts__location {
+    color:white;
+    position:relative;
+    right:35px;
+    letter-spacing: 2px;
+    line-height:2px;
+ }
+
+    button.button {
+    position:relative;
+    bottom:65px;
+    left:30px;
+    color:white;
+    background-color: #ccc8FF;
+    opacity:0.5;
+    padding:10px 5px;
+    font-family: Open-sans, sans-serif;
+    text-transform:uppercase;
+    cursor:pointer;
+
+ }
+
+ .iframe{
+    position:relative;
+    left:50px;
+ }
+
+ .gallery {
+     display:grid;
+     grid-template-columns:repeat(3,1fr);
+     grid-template-rows: repeat(3, 15vw);
+     grid-gap:1px;
+
+ }
+ .gallery__image {
+     border-top:5px solid #ef008e;
+      width:100%;
+ }
+
+ 
+
+
+.content-section {
+    background-color:#25072E;
+}
+
 .content-section:nth-child(odd) {
-    background-color: #e69fe6;
+    background-color: #25072E;
 }
+
+.gallery__image {
+    width:50%;
+    margin-top:50px;
+}
+
+address {
+    position:relative;
+    bottom:200px;
+    right:150px;
+    color:white;
+    font-family:Open-Sans, sans-serif;
+}
+
+
+
+.form__field {
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    
+}
+
+.form__label {
+    color:white;
+    margin:5px;
+    font-family:Open-Sans, sans-serif;
+}
+
+.form__input {
+    border-radius:5px;
+    padding: 5px;
+    width:40%;
+    background-color: #ccc8FF;
+    opacity:0.5;
+    margin-bottom:20px;
+}
+
+button.button {
+ position:relative;
+ right:200px;
+ top:2px;
+ cursor:pointer;
+ border-radius:5px;
+ 
+}
+
+
 /*
 Koniec sekcji pomocniczej
 */
@@ -82,6 +301,10 @@ Natomiast pozycję tę ustawiamy za pomocą parametrów 'top', 'bottom', 'right'
     position: fixed;
     bottom: 50px;
     left: 50px;
+}
+
+.social-links__item {
+    margin:5px;
 }
 
 /*
