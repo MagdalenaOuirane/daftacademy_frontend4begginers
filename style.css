@@ -1,12 +1,3 @@
-/*
-Przeglądarki internetowe nadają znacznikom HTML wartości początkowe,
-które się różnią w zależności od producenta (np. Chrome, Firefox, Opera, Internet Explorer, Microsoft Edge).
-Dlatego popularną praktyką jest tworzenie tzw. resetów,
-czyli plików CSS zawierających reguły, które nadpisują te wartości,
-aby były one jednolite niezalenie od przeglądarki.
-Więcej na ten temat: https://cssreset.com/what-is-a-css-reset/
-*/
-
 * {
     box-sizing: border-box;
 }
@@ -14,10 +5,12 @@ Więcej na ten temat: https://cssreset.com/what-is-a-css-reset/
 body {
    margin: 0;
    padding:0;
-   background-color:#25072E;
-   width:1400px;
-   background-color:CCC8FF;
- color:#25072E;
+   background-image: url('./images/background.svg');
+   background-size:cover;
+   background-position:center;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+
  
 }
 
@@ -42,247 +35,63 @@ ul {
 }
 
 
-.page-header {
-   background-color:#25072E;
-
+body {
+    color:rgba(204, 200, 255, 0.8);
+    font-family:'Open-Sans', sans-serif;
+    font-size:13px;
+    font-weight:normal;
 }
 
-
-.page-navigation {
-    background-color:#25072E;
-}
- .page-navigation__item   {
-    text-transform:uppercase;
-    line-height:1.9;
- 
-}
-
- li a {
-   letter-spacing:4px;
-   text-decoration-line: none;
-   font-size:15px;
-   font-family: Open-Sans, sans-serif;
-   font-weight:bold;
-   color: #ef008e;
- }
-
-
-.content-section {
-    background-color:#25072E;
-    display:flex;
-    flex-direction:column;
-   justify-content:flex-end;
-    
-    
-}
-
-.band-members {
-    display:flex;
-    flex-direction:row;
-   
-}
-
-.band-members__image {
-    width:100%;
-}
-
-.band-members__name {
-    color:white;
-    text-transform:uppercase;
-    font-weight:bold;
-    font-family: Open-Sans, sans-serif;
-    letter-spacing:2px;
-}
-
-.band-members__desc {
-   
-   position:relative;
-   right:125px;
-   font-size:13px;
-   line-height:1px;
-    font-family: Open-sans,sans-serif;
-    letter-spacing:1px;
-}
-
-.band-members__surname, .band-members__music {
-    display:none;
-}
-
-
-
-h2.content-section__header {
+a {
     color:#ef008e;
-    text-transform:uppercase;
-    font-weight:bold;
-    font-family: Open-Sans, sans-serif;
-    letter-spacing:5px;
-    font-size:30px;
+    text-decoration:none;
+}
+
+/* BUTTONS */
+
+.button {
+    padding: 7px 15px;
+    border-radius:3px;
+    background-color: rgba(204, 200, 255, 0.1);
+    border-color: rgba(204, 200, 255, 0.1);
+
+    color: rgba(204, 200, 255, 0.8);
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+    cursor: pointer;
+}
+
+.button--contact {
     margin-top:20px;
-    margin-bottom:20px;
-
-}
-
-.img-band {
-    width:100%;
-    border-top: 5px solid #ef008e;
-}
-.about-section__desc-header {
-    text-transform:uppercase;
-    letter-spacing:3px;
-}
-
-div.about-section__desc {
-    position:absolute;
-    left:60px;
-    margin-bottom:80px;
-    background-color:#25072E;
     display:flex;
-    flex-direction:column;
-    border-bottom: 5px solid #ef008e;
-    width:380px;
-    color:white;
-    text-align:left;
-    height:400px;
-    padding: 60px 20px 60px 20px;
-    margin: 5px;
-    font-family: Open-sans, sans-serif;
-
-}
- p.about-section__desc-header {
-    word-spacing:2px;
-    font-size:15px;
-    font-weight:thin;
- }
-
- div.concerts {
-     display:flex;
-     flex-direction:row;
-     
-    
- } 
- article.concerts__item{
- display:flex;
- flex-wrap:wrap;
- justify-content:space-around;
- } 
-  
-  
-article.concerts__item>img.concerts__image {
-    flex-basis:50%;
-} 
-  
-  img.concerts__image {
-     width:100%;
-     border-bottom: 5px solid #ef008e; 
- } 
-
- p.concerts__date {
-     color:white;
-     position:relative;
-     right:95px;
-     letter-spacing: 2px;
- }
-
- p.concerts__location {
-    color:white;
-    position:relative;
-    right:35px;
-    letter-spacing: 2px;
-    line-height:2px;
- }
-
-    button.button {
-    position:relative;
-    bottom:65px;
-    left:30px;
-    color:white;
-    background-color: #ccc8FF;
-    opacity:0.5;
-    padding:10px 5px;
-    font-family: Open-sans, sans-serif;
-    text-transform:uppercase;
-    cursor:pointer;
-
- }
-
- .iframe{
-    position:relative;
-    left:50px;
- }
-
- .gallery {
-     display:grid;
-     grid-template-columns:repeat(3,1fr);
-     grid-template-rows: repeat(3, 15vw);
-     grid-gap:1px;
-
- }
- .gallery__image {
-     border-top:5px solid #ef008e;
-      width:100%;
- }
-
- 
-
-
-.content-section {
-    background-color:#25072E;
+    justify-content:flex-start;
 }
 
-.content-section:nth-child(odd) {
-    background-color: #25072E;
-}
-
-.gallery__image {
-    width:50%;
-    margin-top:50px;
-}
-
-address {
-    position:relative;
-    bottom:200px;
-    right:150px;
-    color:white;
-    font-family:Open-Sans, sans-serif;
-}
-
-
+/* FORMs*/
 
 .form__field {
-    display:flex;
-    flex-direction:column;
-    align-items:flex-start;
-    
+    margin-bottom: 10px;
 }
 
 .form__label {
-    color:white;
-    margin:5px;
-    font-family:Open-Sans, sans-serif;
+    display: block;
+    margin-bottom: 9px;
 }
 
 .form__input {
-    border-radius:5px;
-    padding: 5px;
-    width:40%;
-    background-color: #ccc8FF;
-    opacity:0.5;
-    margin-bottom:20px;
-}
-
-button.button {
- position:relative;
- right:200px;
- top:2px;
- cursor:pointer;
- border-radius:5px;
- 
+    display: block;
+    height: 35px;
+    width: 300px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: rgba(219, 216, 251, 0.1);
 }
 
 
-/*
-Koniec sekcji pomocniczej
-*/
+/* MAIN WEBSITE LAYOUT */
 
 /*
 Ustawiając sekcje nagłówka i stopki w pozycji 'fixed' sprawiamy,
@@ -290,6 +99,7 @@ Ustawiając sekcje nagłówka i stopki w pozycji 'fixed' sprawiamy,
 w tej samej pozycji względem okna przeglądarki.
 Natomiast pozycję tę ustawiamy za pomocą parametrów 'top', 'bottom', 'right', 'left'.
 */
+
 .page-header {
     position: fixed;
     top: 50px;
@@ -302,9 +112,8 @@ Natomiast pozycję tę ustawiamy za pomocą parametrów 'top', 'bottom', 'right'
     left: 50px;
 }
 
-.social-links__item {
-    margin:5px;
-}
+
+
 
 /*
 Lewy margines ustawiony na kontenerze z główną zawartością strony sprawia,
@@ -317,11 +126,42 @@ skrótem od padding-top: 0, padding-bottom: 0, padding-left: 10%, padding-right:
 Właściwość "text-align: right" przykleja zawartość do prawej strony
 (oddziałuje na elementy, które są elementami inline'owymi, np. tekst, znaczniki <a>, <span> czy elementy z nadanym stylem "display: inline-block").
 */
+
 .page-content {
     margin-left: 220px;
     padding: 0 10%;
     text-align: right;
 }
+
+
+/* NAVIGATION */
+
+
+.page-navigation__items {
+    padding-top: 15px;
+}
+
+.page-navigation__link {
+    line-height: 30px;
+    text-transform: uppercase;
+    letter-spacing: 6.7px;
+}
+
+/* 
+LINKS TO SOCIAL MEDIA */
+
+
+.social-links__item  {
+    margin-top: 15px;
+}
+
+.social-links__img {
+    width: 20px;
+    height: 20px;
+}
+
+
+/* COMMON STYLES */
 
 /*
 Projekt graficzny zakłada, że każda sekcja strony będzie wypełniać całą wysokość okna przeglądarki
@@ -329,6 +169,184 @@ lub więcej, jeśli zawartość danej sekcji jest wyższa. Dlatego świetnym roz
 będzie użycie jednostki "vh", która oznacza 1% wysokości okna przeglądarki z właściwością "min-height",
 która wymusza wysokość elementu na zadaną wartość lub wyższą.
 */
+
 .content-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
     min-height: 100vh;
 }
+
+.content-section__header {
+    margin-bottom: 60px;
+    color: #EF008E;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 4.5px;
+    text-transform: uppercase;
+}
+
+.content-section__body {
+    flex-grow: 1;
+}
+
+
+/* SECTION HOME */
+
+.content-section.home-section {
+    align-items: center;
+}
+
+.band-members {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.band-members__name,
+.band-members__desc {
+    display: none;
+}
+
+
+
+/* SECTION ABOUT */
+
+/*
+Żeby ustawić opis zespołu w rogu zdjęcia, można zastosować popularną sztuczkę z pozycjonowaniem.
+Wykorzystuje ona właściwość elementów z "position: absolute", których położenie jest ustalane
+względem najbliższego mu rodzica, który jest pozycjonowany (ma ustawione "position" na inne
+niż "static", czyli "absolute", "relative", "fixed" lub "sticky").
+Dlatego gdy na jego rodzica "about" ustawimy "position: relative" (które bez parametrów
+dodatkowych top, left, bottom, right, nic nie zmienia w jego pozycji), to zawarty w nim
+element "about__desc" ustawia się absolutnie względem niego.
+Gdy dodamy wartości "left: -290px" i "bottom: -115px", wtedy "about__desc" będzie wystawać
+z lewego dolnego rogu "about" dokładnie o te odległości.
+Natomiast aby nie dopuścić do sytuacji, że wystający "about__desc" nachodził
+na sąsiadujące sekcje na stronie, nadajemy "about" marginesy adekwatne do odległości
+podane przy pozycjonowaniu "about_desc".
+*/
+.about {
+    position: relative;
+    margin-left: 290px;
+    margin-bottom: 115px;
+}
+
+.about__image {
+    max-width: 100%;
+    border-top: 3px solid #EF008E;
+}
+
+.about__desc-header {
+    margin-bottom: 30px;
+    color: #CCC8FF;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.about__desc {
+    position: absolute;
+    left: -290px;
+    bottom: -115px;
+    width: 380px;
+    padding: 30px;
+    background-color: #25072e;
+    border-bottom: 3px solid #EF008E;
+}
+
+
+
+/* SECTION CONCERTS */
+
+.concerts {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 55px;
+    row-gap: 45px;
+}
+
+.concerts__image {
+    max-width: 100%;
+    border-bottom: 3px solid #EF008E;
+}
+
+.concerts__info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.concerts__info-base {
+    flex-grow: 1;
+}
+
+.concerts__date {
+    margin:0;
+    color: #CCC8FF;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3.8px;
+}
+
+.concerts__location {
+    margin: 0;
+    letter-spacing: 3.8px;
+}
+
+
+/* SECTION VIDEO */
+
+
+
+.embedded-video {
+    border-top: 3px solid #EF008E;
+}
+
+
+/* SECTION PHOTOS */
+
+.gallery {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.gallery__image {
+    max-width: 100%;
+    border-top: 3px solid #EF008E;
+}
+
+/* SECTION CONTACT */
+
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.contact__img {
+    max-width: 100%;
+}
+
+.contact__address {
+    padding: 70px;
+    font-style: normal;
+}
+ 
+.contact__form {
+    flex-basis: 10%;
+    padding-top: 40px;
+}
+.form__label {
+    display:flex;
+    justify-content: flex-start;
+}
+
