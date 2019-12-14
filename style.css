@@ -10,7 +10,7 @@
     left:350px;
     font-size:40px;
     line-height:50px;
-    transition: .3s linear;
+    transition: 8s ease-in;
 }
 
 
@@ -27,11 +27,12 @@ aside {
     left:-350px;
     width:300px;
     background-color:pink;
-    transition: 3s linear;
+    transition: 8s ease-out;
 }
 
 i.fas {
     display:none;
+    
 }
 
 i.show {
@@ -40,6 +41,7 @@ i.show {
 
 aside.active {
     left:0;
+   
 }
 
 
@@ -363,7 +365,14 @@ podane przy pozycjonowaniu "about_desc".
     width: calc((100% - 3 * 20px) / 3);
     margin-top: 20px;
     margin-left: 20px;
+    filter:hue-rotate(120deg);
 }
+
+.gallery__item:hover {
+ transform: rotate(150deg) scale(1.5);
+ transform-origin: 5% 10%;
+}
+
 
 .gallery__image {
     width: 100%;
