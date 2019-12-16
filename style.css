@@ -365,7 +365,7 @@ podane przy pozycjonowaniu "about_desc".
     width: calc((100% - 3 * 20px) / 3);
     margin-top: 20px;
     margin-left: 20px;
-    filter:hue-rotate(120deg);
+ 
 }
 
 .gallery__item:hover {
