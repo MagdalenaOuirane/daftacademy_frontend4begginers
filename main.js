@@ -20,15 +20,29 @@ hamburger.addEventListener("click", function () {
 
 
 // SECOND TASK
+const concerts = document.querySelector('#concerts');
 
+concerts.addEventListener('click', (e) => {
+    if (e.target.classList.contains('button--buy-ticket')) {
+        const buyTicketButton = e.target;
+        const haveFunText = document.createElement('p');
+        haveFunText.textContent = 'Have fun!';
 
-const btn = document.querySelector('.button');
-
-btn.addEventListener('click', () => {
-    btn.classList.remove('button');
-    btn.textContent = "Have fun!";
-
+        const buttonContainer = buyTicketButton.parentElement;
+        buttonContainer.insertBefore(haveFunText, buyTicketButton);
+        buyTicketButton.remove();
+        // OR
+        // buyTicketButton.replaceWith(haveFunText);
+    }
 });
+
+// const btn = document.querySelector('.button');
+
+// btn.addEventListener('click', () => {
+//     btn.classList.remove('button');
+//     btn.textContent = "Have fun!";
+
+// });
 
 //ANIMATION
 
@@ -46,41 +60,20 @@ function mouseOut() {
 
 //THIRD TASK
 
-//Creating Form Data Object
+//log form data
 
-// let FormData = new FormData(formElem);
+const formElem = document.querySelector('.contact__form');
 
-// formData.append("email", "magda@gmail.com");
-// formData.append("topic", "concerts");
+formElem.addEventListener('submit', (e) => {
+    e.preventDefault();
+    // to get form values use FormData and Object.fromEntries
+    const formData = new FormData(e.target);
 
-// let blob = new Blob([content], { type: "text/xml" });
-
-// let request = new XMLHttpRequest();
-// request.open('POST', "");
-// request.send(formData);
-
+    const formObject = Object.fromEntries(formData);
+    console.log(formObject);
 
 
-
-
-
-// const formElem = document.querySelector('contact__form');
-
-// formElem.addEventListener('submit', (e) => {
-//     e.preventDefault();
-//     // to get form values use FormData and Object.fromEntries
-//     new FormData(formElem);
-
-//     const entries = new Map([
-//         ['email', 'magda@gmail.com'],
-//         ['topic', 'concerts']
-//     ]);
-
-//     const obj = Object.fromEntries(entries);
-//     console.log(obj);
-
-
-// });
+});
 
 
 
